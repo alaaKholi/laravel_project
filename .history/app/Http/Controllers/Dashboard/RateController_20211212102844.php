@@ -12,7 +12,7 @@ class RateController extends Controller
 
     public function index()
     {
-        $stores = Store::with('rate')->with('category')->paginate(5);
+        $stores = Store::with('rate')->with('category')->get();
         foreach ($stores as $store) {
             $store->is_trend = $this->lsq($store->id);
         }
@@ -71,8 +71,8 @@ class RateController extends Controller
             // echo ' intercept ', $aFit, '    ';
             // echo ' slope ', $bFit, '   ';
             return $bFit > 0;
-        } else {
-            return true;
         }
+        return true;
     }
+
 }

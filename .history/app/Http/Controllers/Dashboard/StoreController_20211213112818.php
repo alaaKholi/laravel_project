@@ -17,7 +17,7 @@ class StoreController extends Controller
     public function index()
     {
         $stores = Store::withTrashed()->with('category')->paginate(5);
-        // dd($stores->items());
+        // dd($stores);
         return view('dashboard.stores.index')->with('stores', $stores);
     }
 

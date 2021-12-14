@@ -65,7 +65,7 @@
                                         <td>{{ $store->address }}</td>
                                         <td>{{ $store->mobile }}</td>
                                         <td>{{ $store->email }}</td>
-                                        <td>{{ $store->category->name ?? '' }}</td>
+                                        <td>{{ $store->category->name }}</td>
 
                                         <td>
                                             <div class="row">

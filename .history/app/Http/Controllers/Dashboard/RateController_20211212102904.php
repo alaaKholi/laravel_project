@@ -71,8 +71,8 @@ class RateController extends Controller
             // echo ' intercept ', $aFit, '    ';
             // echo ' slope ', $bFit, '   ';
             return $bFit > 0;
-        } else {
-            return true;
         }
+        return true;
     }
+
 }
